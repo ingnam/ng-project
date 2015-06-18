@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope', function($scope) {
+app.controller('MainController', ['$scope', 'forecast', function($scope, forecast) {
 	$scope.title = "I'm awesome";
 	$scope.promo = "Books you must read";
 
@@ -83,4 +83,8 @@ app.controller('MainController', ['$scope', function($scope) {
 			price: 0.99
 		}
 	];
+
+	forecast.success(function(data) {
+		$scope.fiveDay = data;
+	});
 }]);
