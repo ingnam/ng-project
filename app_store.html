@@ -31,6 +31,7 @@
         <!--We can use Angular's built-in directives(ng-repeat) together with custom directives(<app-info>) to create more readable apps.-->  
         <div class="card" ng-repeat="app in apps">
           <app-info info="app"></app-info>
+          <install-app></install-app>
         </div>
       </div>
     </div>
@@ -43,6 +44,7 @@
 
     <!-- Directives -->
     <script src="js/directives/appInfo.js"></script>
+     <script src="js/directives/installApp.js"></script>
 
   </body>
 </html>
